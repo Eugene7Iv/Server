@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CA8801A7-8FC4-4ED3-82F5-AA01207EAAC2}</ProjectGuid>
+    <ProjectGuid>{3034353A-4582-4B55-8055-FB439ABBF5EF}</ProjectGuid>
     <Keyword>QtVS_v303</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">10.0.17763.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">10.0.17763.0</WindowsTargetPlatformVersion>
@@ -94,10 +94,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="Server.qrc" />
-    <QtUic Include="Server.ui" />
-    <QtMoc Include="Server.h" />
-    <ClCompile Include="Server.cpp" />
+    <QtRcc Include="Client.qrc" />
+    <QtUic Include="Client.ui" />
+    <QtMoc Include="Client.h" />
+    <ClCompile Include="Client.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

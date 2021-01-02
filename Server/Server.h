@@ -1,15 +1,26 @@
 #pragma once
 
 #include <QtWidgets/QWidget>
-#include "ui_Server.h"
+class QTcpServer;
+class QTextEdit;
+class QTcpSocket;
 
 class Server : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    Server(QWidget *parent = Q_NULLPTR);
+	Server(int nPort, QWidget* pwgt = 0);
 
 private:
-    Ui::ServerClass ui;
+	void sendToClient(QTcpSocket* pSocket, const QString& str);
+
+public slots:
+	virtual void slotNewConnection();
+	void slotReadClient();
+
+private:
+	QTcpServer* m_ptcpServer;
+	QTextEdit*  m_ptxt;
+	quint16     m_nNextBlockSize;
 };
